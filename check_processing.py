@@ -42,8 +42,7 @@ def process_orders_data(orders_list):
                         product_data[el.name]["amount"] = el.amount
                         product_data[el.name]["total_returned"] = 0
                         product_data[el.name]["total_profit"] = (el.total_amount - el.cost_price * el.amount)
-                        product_data[el.name]["total_discount"] = (
-                                    el.total_absolute_discount - el.total_absolute_charge)
+                        product_data[el.name]["total_discount"] = (el.total_absolute_discount - el.total_absolute_charge)
                     else:
                         product_data[el.name]["first_sale_date"] = None
                         product_data[el.name]["last_sale_date"] = None
